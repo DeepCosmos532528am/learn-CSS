@@ -1,0 +1,106 @@
+/*Selectors: Learn about selectors in CSS*/
+/*Explore selectors in CSS*/
+/*1st type is element selectors, where the name of the elements are directly used*/
+
+
+/*
+
+h1{
+
+background-color:azure;
+
+}
+
+*/
+/*2nd type is 'id'-selectors, where the id is used to reference elements */
+
+#idselector {
+    background-color: rgb(255, 0, 0);
+}
+
+/*3rd type is 'class'-selectors, where the class is used to reference multiple elements at once*/
+
+.classSelector {
+    background-color: rgb(198, 136, 255);
+}
+
+/*4th type is 'group-based'-selectors,where the multiple selectors can be grouped together to apply same style to multiple selectors at once including the existing id, element or class selectors*/
+
+.classSelector,
+#idselector {
+    color: rgba(223, 197, 94, 0.514);
+    border-radius: 20px;
+
+}
+
+/*background colour*/
+/*mostly hexa-decimal format is used, then rgba then rgb then hsla*/
+
+h1 {
+
+    background-color: hsla(187, 50%, 50%, 0.569);
+}
+
+/*font-size*/
+
+h2 {
+    font-size: 80px; /*px is the unit, which is fix accross the screen, it is not realtive but absolute*/
+} 
+
+
+ul{
+    font-size: 10px;
+}
+li{
+    font-size: 2em; /*This style the size of the specific tag's text relative to the parents font size, like if parent is 10px and here as font size is 2em, it means 10*2=20px */
+}
+
+#text1{
+    font-size: 5vw; /* vw is relative to the size of the browser window (viewport), completely ignoring the parent container's size. This is useful for elements that need to break out of a container or for typography that should scale with the screen width. */
+
+
+}
+#text2{
+    font-size: 5vh; /*same as vw but in realtive to browser's height*/
+}
+
+#text3{
+    font-size: 40%; /*In relative to the parent container*/
+}
+
+#text4{
+    font-family: 'Courier New', Courier, monospace; /*here if 'Courier New' is not found, the browser checks for the next font: Courier. If yes, it uses it and so on*/
+}
+
+/*Let say if want to use some other fonts, then refer to other libraries like Google fonts, font-awesome as we have already linked it here in index.html/*/
+
+#text5{
+ font-family: "Bitcount Prop Single Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 20;
+  font-style: normal;
+  font-size: 50px;
+ 
+}
+
+#text6{
+    font-weight: 100;/*Font weight refers to the thickness or boldness of a font's characters. It is a CSS property*/
+}
+
+#text7{
+font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
