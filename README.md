@@ -37,29 +37,39 @@ Your complete resource for learning web styling – featuring hands-on examples,
 17. `font-style` (revisited)
 18. `box-shadow` – Shadow effects
 19. `<span>` – Inline text container
-20. `*` – Universal selector to target all elements
+20. `*` – Universal selector to target all elements  
 21. Block-Level vs Inline Elements
 
----
+    Block elements form the main structure of a page. They always start on a new line and take up the full width available by default.
 
-## 📦 Block-Level vs Inline Elements
+    **Characteristics:**
+    - Start on a new line
+    - Take full width of the parent container
+    - Width and height can be set
+    - Respect all margins and padding
 
-### Block-Level Elements
+    **Examples:**
 
-Block elements form the main structure of a page. They always start on a new line and take up the full width available by default.
+    ```html
+    <div>, <p>, <h1>-<h6>, <ul>, <ol>, <li>, <section>, <article>, <header>, <footer>
+    ```
 
-**Characteristics:**
-- Start on a new line
-- Take full width of the parent container
-- Width and height can be set
-- Respect all margins and padding
+    Inline elements flow along with text and only take up as much width as necessary.
 
-**Examples:**
+    **Characteristics:**
+    - Do not start on a new line
+    - Only as wide as their content
+    - Cannot set width or height directly
+    - Only respect horizontal spacing
 
-```html
-<div>, <p>, <h1>-<h6>, <ul>, <ol>, <li>, <section>, <article>, <header>, <footer>.
+    **Examples:**
 
----    
+    ```html
+    <span>, <a>, <strong>, <em>, <img>
+    ```
 
-22.     
+22. 
+
+
+     
 
