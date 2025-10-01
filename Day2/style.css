@@ -1,0 +1,51 @@
+*{
+   padding: 0px;
+   margin: 0px;
+}
+
+h1{
+   background-color: lightgreen;
+   color: rgb(9, 114, 23);
+   height: 300px;
+   width: 300px;
+   padding:20px;
+   margin: 20px;  
+   border: 2px dotted rgb(101, 136, 98);
+   font-style: italic;
+   box-shadow: 20px 20px 20px 20px rgb(30, 210, 96);
+   display: inline; /*applied inline*/
+}
+
+h2{
+border-top: 2px solid rgb(216, 15, 15);
+background-color: rgb(255, 3, 3);
+display: inline; /*applied inline*/
+}
+
+p{
+
+}
+
+span{
+   color: blueviolet;
+   background-color: tomato;
+   border-radius: 20px;
+   /*display: block;*/
+   height:200px ;
+   width: 200px;
+}
+
+
+span{
+   display: inline-block
+}
+
+#div2{
+   box-sizing: border-box;
+   background-color: lightblue;
+  
+   padding:100px;
+}
+ eveniet doloribus dignissimos moleias fugiat!
+
+hello
