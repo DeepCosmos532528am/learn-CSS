@@ -1,0 +1,75 @@
+body{
+    background-color:black;
+   
+}
+#container{
+    background-color: coral;
+    display: flex;
+    flex-direction:row;
+    height: 700px;
+    width: 100%;
+    /*flex-direction:column-reverse;*/
+    /*flex-direction:row-reverse;*/
+    /* align-items: center;  */
+    /* justify-content: center; */
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+     /*flex-wrap: wrap;*/ /*this is used to wrap the boxes in the container */ 
+    gap:20px;/*this is used to give gap between the boxes in the container */
+    
+   
+
+}
+
+/* #container2{
+    background-color: crimson;
+    height: 200px;
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#circle{
+    background-color: aliceblue;
+    height: 100px;
+    width: 100px;
+    border-radius: 200px;
+/* } */ /*this sis the flag made like Japan, in design wise only through the new diffrent and easy concept i.e. flex, and jsutify content, align items etc. As it is quite easy right!! */ 
+
+
+#f{
+    background-color: antiquewhite;
+   /* flex-grow: 1; */ /*this will make the box to grow and take all the available space in the container */
+}
+#s{
+    background-color: aqua;
+    flex-shrink: 2; /* This makes the box shrink **twice as fast** as elements with flex-shrink: 1 when space is limited */
+
+
+}
+#t{
+    background-color: blueviolet;
+    /* flex-grow: 3; */ /*this will make the box to grow and take all the available space in the container */
+    align-self: flex-end;
+
+}
+#fo{
+    background-color: brown;
+flex-basis: 120px; /* Sets the initial size on the main axis (either width or height) to 120px, overriding width/height unless set to 'auto' */
+
+}
+#fi{
+    background-color: burlywood;
+    /* flex-grow: 2; */ /*this will make the box to grow and take all the available space in the container */
+
+}
+
+.innbox{
+    /* margin:2px;*/ /*commented out because the 'gap' in the parent container is given */
+    height: 100px;
+    width: 100px;
+}

@@ -209,6 +209,84 @@ No vertical styling like height, top etc types works on inlines then.
     📌 These helped apply `z-index`, flow rules, and viewport logic practically.
 
 ---
+### Day 4 – Positioning, Stacking & Viewport Concepts
 
+36. **`display: flex`**
 
+    - Applied on the **parent container**, flexbox affects how **child elements** are laid out.
+    - Enables flexible and responsive layouts.
+
+37. **Main Axis and Cross Axis**
+
+    - Flexbox layouts have two axes:
+    - **Main axis**: Direction defined by `flex-direction` (`row` or `column`).
+    - **Cross axis**: Perpendicular to the main axis.
+  
+38. **`justify-content`**
+
+    - Aligns children **along the main axis**.
+    - Common values:
+    - `flex-start` (default)
+    - `center`
+    - `flex-end`
+    - `space-between`
+    - `space-around`
+    - `space-evenly`
+
+39. **`align-items`**
+
+    - Aligns children **along the cross axis**.
+    - Common values:
+    - `stretch` (default)
+    - `center`
+    - `flex-start`
+    - `flex-end`
+    - `baseline`
+
+40. **Flex Properties on Children**
+
+    - `flex-grow`: Defines how much a flex item will grow relative to others.
+    - `flex-shrink`: Defines how much a flex item will shrink relative to others.
+    - `flex-basis`: Sets the initial main size of a flex item before growing or shrinking.
+    - `align-self`: Overrides `align-items` for individual items.
+
+41. **Flex Wrap & Gap**
+
+    - `flex-wrap: wrap;` allows flex items to wrap onto multiple lines.
+    - `gap` creates spacing between flex items easily without margins.
+
+42. **Practical Notes**
+
+    - Flexbox simplifies layout tasks like centering, spacing, and ordering elements.
+    - It replaces many older layout hacks involving floats and positioning.
+    - Experiment with `flex-direction`, `justify-content`, `align-items`, and flex child properties to control layout precisely.
+
+    ---
+
+    #### Example Summary from Today's Practice:
+
+    ```css
+    #container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        height: 700px;
+        width: 100%;
+    }
+
+        #f { background-color: antiquewhite; }
+        #s { background-color: aqua; flex-shrink: 2; }
+        #t { background-color: blueviolet; align-self: flex-end; }
+        #fo { background-color: brown; flex-basis: 120px; }
+        #fi { background-color: burlywood; }
+        
+43. **Responsive Behavior with Flexbox**
+
+- Flex items automatically adjust their size and position to fit different screen sizes.
+- Using `flex-wrap: wrap` lets items flow into multiple rows or columns on smaller screens.
+- Combining `flex-grow`, `flex-shrink`, and `flex-basis` allows flexible and adaptive layouts without media queries in many cases.
+
+    ---
+    
+     
 
