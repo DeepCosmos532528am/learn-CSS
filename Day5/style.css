@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    /* grid-template-rows: 200px 200px; */
+    /* grid-template-columns: 200px 200px; */ 
+     
+    /* px unit here, leads to overflow of the boxes element from the defined div named container in which they are present on providing the 'gap:_;' */
+    
+    
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+
+    background-color: rgb(186, 117, 232);
+    gap: 3px;
+    height: 400px;
+    width: 400px;
+}
+
+.child1 {
+    background-color: rgb(132, 25, 233);
+}
+
+.child2 {
+    background-color: rgb(63, 20, 104);
+}
+
+.child3 {
+    background-color: rgb(80, 24, 132);
+}
+
+.child4 {
+    background-color: rgb(146, 62, 219);
+}
