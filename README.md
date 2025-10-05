@@ -90,56 +90,56 @@ No vertical styling like height, top etc types works on inlines then.
 ## CSS Priority: Inline > Internal > External (Half Myth!)
 
 
-    This is only **half true**. The **actual priority or affection of CSS rules** does **not** solely depend on where the CSS is written (inline, internal, external), but rather on **which rule comes later** (in the cascade), **and the specificity** of the selector used.
+This is only **half true**. The **actual priority or affection of CSS rules** does **not** solely depend on where the CSS is written (inline, internal, external), but rather on **which rule comes later** (in the cascade), **and the specificity** of the selector used.
 
-    Think of CSS as checking rooms in a line:
+Think of CSS as checking rooms in a line:
 
-    - You have **10 rooms** to check.
-    - You must go **sequentially from Room 1 to Room 10**.
-    - **You cannot go back** or **break the sequence**.
-    - After visiting all rooms, **you choose the room with the most money to stay in**.
+- You have **10 rooms** to check.
+- You must go **sequentially from Room 1 to Room 10**.
+- **You cannot go back** or **break the sequence**.
+- After visiting all rooms, **you choose the room with the most money to stay in**.
 
-    In this analogy:
+In this analogy:
 
-    - The **room number** represents the **order of CSS in the document**.
-    - The **money in the room** represents the **selector specificity** or the **way CSS is applied**.
+- The **room number** represents the **order of CSS in the document**.
+- The **money in the room** represents the **selector specificity** or the **way CSS is applied**.
 
-    ### Selector Specificity (Money in the Room)
+### Selector Specificity (Money in the Room)
 
-    | Selector Type | Specificity (Money) | Notes                            |
-    |---------------|---------------------|----------------------------------|
-    | Inline CSS    | ₹1000               | Highest specificity              |
-    | ID Selector   | ₹700                | High specificity (`#id`)        |
-    | Class Selector| ₹500                | Medium specificity (`.class`)   |
-    | Tag Selector  | ₹200                | Lowest specificity (`div`, `p`) |
+| Selector Type | Specificity (Money) | Notes                            |
+|---------------|---------------------|----------------------------------|
+| Inline CSS    | ₹1000               | Highest specificity              |
+| ID Selector   | ₹700                | High specificity (`#id`)        |
+| Class Selector| ₹500                | Medium specificity (`.class`)   |
+| Tag Selector  | ₹200                | Lowest specificity (`div`, `p`) |
 
 
-    Even if a `tag selector` comes later in the cascade, an earlier `ID selector` or `inline style` might **win** due to higher specificity.
+Even if a `tag selector` comes later in the cascade, an earlier `ID selector` or `inline style` might **win** due to higher specificity.
 
-    So, **order (cascade) is important**, but **selector specificity (money) decides who actually wins**.
+So, **order (cascade) is important**, but **selector specificity (money) decides who actually wins**.
         ----
  29. `!important` Flag – Top Priority Override
 
-    If a CSS rule includes the `!important` flag, it **overrides all other rules**, regardless of specificity or order.
+If a CSS rule includes the `!important` flag, it **overrides all other rules**, regardless of specificity or order.
 
-    ```css
+```css
     p {
     color: red !important;
     }    
+```
+⚠️ Use `!important` sparingly. It breaks the natural cascade and can make debugging CSS difficult.
 
-    ⚠️ Use !important sparingly. It breaks the natural cascade and can make debugging CSS difficult.
-        ----
  30. CSS Position Property – Controlling Element Flow
 
-    The `position` property determines how an element is placed in the document flow. Main values:
+The `position` property determines how an element is placed in the document flow. Main values:
 
-    - `static` (default): In normal flow, cannot use `top`, `left`, etc.
-    - `relative`: In flow, but can be nudged visually using `top`, `left`, etc.
-    - `absolute`: Removed from flow, positioned relative to nearest positioned ancestor.
-    - `fixed`: Removed from flow, positioned relative to the viewport (screen).
-    - `sticky`: Behaves like `relative` until a scroll threshold, then acts like `fixed`.
+- `static` (default): In normal flow, cannot use `top`, `left`, etc.
+- `relative`: In flow, but can be nudged visually using `top`, `left`, etc.
+- `absolute`: Removed from flow, positioned relative to nearest positioned ancestor.
+- `fixed`: Removed from flow, positioned relative to the viewport (screen).
+- `sticky`: Behaves like `relative` until a scroll threshold, then acts like `fixed`.
 
-    📌 Absolute, fixed, and sticky are out of the normal flow. Relative and static are in the flow.
+📌 Absolute, fixed, and sticky are out of the normal flow. Relative and static are in the flow.
 
 ---
 
@@ -289,7 +289,7 @@ No vertical styling like height, top etc types works on inlines then.
         ---
  44. **made Login & Signup form**
 
-    ### Day 5 – CSS Grid Layout  
+### Day 5 – CSS Grid Layout  
 
 45. **Introduction to Grid** – `display: grid;` turns a container into a grid parent. Child elements (grid items) are placed inside defined **rows** and **columns**. Compared to Flexbox: Flexbox is 1D (row OR column), Grid is 2D (rows AND columns at the same time).  
 
@@ -301,55 +301,59 @@ No vertical styling like height, top etc types works on inlines then.
     grid-template-columns: 200px 200px;
     }
 
-    - 📌 fr = “fractional unit” → best for flexible, responsive grids.
+- 📌 fr = “fractional unit” → best for flexible, responsive grids.
 
 47.  **Gap Between Items**
     - gap adds spacing between rows and columns.
 
-    Shorthand for row-gap + column-gap.
-    ```css
+Shorthand for row-gap + column-gap.
+
+```css
     .container {
       display: grid;
         gap: 10px;
     }
+```
+
 
 48. **Repeat Function**
 
-        - Shortcut for repeating row/column sizes.
+    - Shortcut for repeating row/column sizes.
 
-        ```css
-
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-
+    ```css
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    ```
+    
     - 📌 Used in making a chessboard layout.
 
 49. **Placing Items with Grid Lines**
 
     grid-column and grid-row place elements precisely.
+
     ```css
-    - Syntax: grid-column: start / end;
-     
- 
+    /* Syntax: grid-column: start / end; */
+
     .green1 {
-    grid-row: 1 / 4; /* spans 3 rows */
+      grid-row: 1 / 4; /* spans 3 rows */
     }
     .green2 {
-    grid-column: 2 / 4; /* spans across 2 columns */
+      grid-column: 2 / 4; /* spans across 2 columns */
     }
+    ```
 
 50. **Spanning Rows & Columns**
 
     Grid items can stretch over multiple rows/columns.
-   
-   ```css
+
+    ```css
     .header {
-    grid-column: 1 / 4; /* span across 3 columns */
+      grid-column: 1 / 4; /* span across 3 columns */
     }
     .sidebar {
-    grid-row: 2 / 4;   /* span across 2 rows */
+      grid-row: 2 / 4;   /* span across 2 rows */
     }
-        ---
+    ```
 
 51. **Responsive Units in Grid**
 
@@ -359,9 +363,10 @@ No vertical styling like height, top etc types works on inlines then.
 
     - auto-fit & auto-fill: let grid auto-create tracks.
 
-  ```css
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
-        ---
+    ```css
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    ```
+
 52. **Nested Grids**
 
     - A grid item can itself become a grid container.
@@ -370,18 +375,18 @@ No vertical styling like height, top etc types works on inlines then.
 
     ```css
     .row2-col2 {
-    display: grid;
-    grid-template-rows: 50fr 50fr;
+      display: grid;
+      grid-template-rows: 50fr 50fr;
     }
-        ---
+    ```
+
 53. **Grid vs Flexbox – When to Use?**
 
     - Flexbox → perfect for linear layouts (navbars, toolbars, aligning buttons).
 
     - Grid → perfect for 2D layouts (page templates, dashboards, games like chess).
 
-    - They can be combined in real projects.    
-        ---
+    - They can be combined in real projects.
 
 54. **Practical Layouts Built**
 
@@ -395,8 +400,6 @@ No vertical styling like height, top etc types works on inlines then.
 
     ✅ Nested grids for advanced responsive layout.
 
-            ---
-
 55. **Project Ideas with Grid**
 
     - Chessboard UI
@@ -408,5 +411,3 @@ No vertical styling like height, top etc types works on inlines then.
     - Dashboard with sidebar & widgets
 
     - News website (header, nav, content, footer)
-
-    
