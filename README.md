@@ -282,13 +282,127 @@ No vertical styling like height, top etc types works on inlines then.
         
 43. **Responsive Behavior with Flexbox**
 
-- Flex items automatically adjust their size and position to fit different screen sizes.
-- Using `flex-wrap: wrap` lets items flow into multiple rows or columns on smaller screens.
-- Combining `flex-grow`, `flex-shrink`, and `flex-basis` allows flexible and adaptive layouts without media queries in many cases.
+    - Flex items automatically adjust their size and position to fit different screen sizes.
+    - Using `flex-wrap: wrap` lets items flow into multiple rows or columns on smaller screens.
+    - Combining `flex-grow`, `flex-shrink`, and `flex-basis` allows flexible and adaptive layouts without media queries in many cases.
 
-    ---
-44. **made Login & Signup form**
+        ---
+ 44. **made Login & Signup form**
 
+    ### Day 5 – CSS Grid Layout  
 
+45. **Introduction to Grid** – `display: grid;` turns a container into a grid parent. Child elements (grid items) are placed inside defined **rows** and **columns**. Compared to Flexbox: Flexbox is 1D (row OR column), Grid is 2D (rows AND columns at the same time).  
+
+46. **Defining Rows and Columns** – `grid-template-rows` defines row sizes, `grid-template-columns` defines column sizes. Units can be `px`, `%`, `fr`, or `auto`. Example:  
+    ```css
+    .container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    }
+
+    - 📌 fr = “fractional unit” → best for flexible, responsive grids.
+
+47.  **Gap Between Items**
+    - gap adds spacing between rows and columns.
+
+    Shorthand for row-gap + column-gap.
+    ```css
+    .container {
+      display: grid;
+        gap: 10px;
+    }
+
+48. **Repeat Function**
+
+        - Shortcut for repeating row/column sizes.
+
+        ```css
+
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+    - 📌 Used in making a chessboard layout.
+
+49. **Placing Items with Grid Lines**
+
+    grid-column and grid-row place elements precisely.
+    ```css
+    - Syntax: grid-column: start / end;
      
+ 
+    .green1 {
+    grid-row: 1 / 4; /* spans 3 rows */
+    }
+    .green2 {
+    grid-column: 2 / 4; /* spans across 2 columns */
+    }
 
+50. **Spanning Rows & Columns**
+
+    Grid items can stretch over multiple rows/columns.
+   
+   ```css
+    .header {
+    grid-column: 1 / 4; /* span across 3 columns */
+    }
+    .sidebar {
+    grid-row: 2 / 4;   /* span across 2 rows */
+    }
+
+51. **Responsive Units in Grid**
+
+    - fr (fraction): flexible division of free space.
+
+    - minmax(min, max): set min and max size.
+
+    - auto-fit & auto-fill: let grid auto-create tracks.
+
+  ```css
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+
+52. **Nested Grids**
+
+    - A grid item can itself become a grid container.
+
+    - Useful for complex layouts (e.g., dashboard → sidebar with its own sections).
+
+    ```css
+    .row2-col2 {
+    display: grid;
+    grid-template-rows: 50fr 50fr;
+    }
+
+53. **Grid vs Flexbox – When to Use?**
+
+    - Flexbox → perfect for linear layouts (navbars, toolbars, aligning buttons).
+
+    - Grid → perfect for 2D layouts (page templates, dashboards, games like chess).
+
+    - They can be combined in real projects.    
+
+54. **Practical Layouts Built**
+
+    ✅ 2×2 grid with fractional units.
+
+    ✅ Chessboard (8×8 grid) using repeat(8, 1fr).
+
+    ✅ Complex green/red/yellow grid (L-shaped spans).
+
+    ✅ Website template with header, sidebar, content, footer.
+
+    ✅ Nested grids for advanced responsive layout.
+
+55. **Project Ideas with Grid**
+
+    - Chessboard UI
+
+    - Calculator layout
+
+    - Portfolio gallery
+
+    - Dashboard with sidebar & widgets
+
+    - News website (header, nav, content, footer)
+
+    
