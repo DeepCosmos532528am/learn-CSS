@@ -349,6 +349,7 @@ No vertical styling like height, top etc types works on inlines then.
     .sidebar {
     grid-row: 2 / 4;   /* span across 2 rows */
     }
+        ---
 
 51. **Responsive Units in Grid**
 
@@ -360,7 +361,7 @@ No vertical styling like height, top etc types works on inlines then.
 
   ```css
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
-
+        ---
 52. **Nested Grids**
 
     - A grid item can itself become a grid container.
@@ -372,7 +373,7 @@ No vertical styling like height, top etc types works on inlines then.
     display: grid;
     grid-template-rows: 50fr 50fr;
     }
-
+        ---
 53. **Grid vs Flexbox – When to Use?**
 
     - Flexbox → perfect for linear layouts (navbars, toolbars, aligning buttons).
@@ -380,6 +381,7 @@ No vertical styling like height, top etc types works on inlines then.
     - Grid → perfect for 2D layouts (page templates, dashboards, games like chess).
 
     - They can be combined in real projects.    
+        ---
 
 54. **Practical Layouts Built**
 
@@ -392,6 +394,8 @@ No vertical styling like height, top etc types works on inlines then.
     ✅ Website template with header, sidebar, content, footer.
 
     ✅ Nested grids for advanced responsive layout.
+
+            ---
 
 55. **Project Ideas with Grid**
 
