@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    color: antiquewhite;
+}
+
+.container {
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 6fr 6fr 6fr;
+    height: 400px;
+    width: 400px;
+    gap: 10px;
+}
+
+.box {
+    background-color: rgb(100, 100, 198);
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.sidebar {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: rgb(95, 162, 162);
+}
+
+.content1 {
+    grid-column: 2/4;
+    /*This means the same as the grid-column-start where it means from 2 to 4 column. similar goes with row as well*/
+}
+
+.footer {
+    grid-column: 1/4;
+}
+
+.content1,
+.content2,
+.content3 {
+    background-color: rgb(60, 171, 193);
+}
+
+.
+/* the below is the code I tried to make grid layout! but it works fine. */
+
+/* 
+.container {
+    display: grid;
+    grid-template-rows: 10fr 65fr 15fr;
+    height: 50vh;
+    width: 50vw;
+    gap: 10px;
+    background-color: rgb(39, 34, 34);
+}
+
+.row1 {
+    background-color: rgb(119, 47, 201);
+}
+
+.row2 {
+    background-color: rgb(49, 49, 45);
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    gap: 10px;
+    background-color: rgb(39, 34, 34);
+
+
+}
+
+.row2-col1 {
+    background-color: rgb(12, 157, 155);
+}
+
+.row2-col2{
+    display: grid;
+    grid-template-rows: 50fr 50fr;
+    gap: 10px;
+}
+.row2-col2-row1{
+    background-color: royalblue;
+}
+.row2-col2-row2{
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    gap: 10px;
+}
+.row2-col2-row2-col1{
+background-color: royalblue;
+}
+.row2-col2-row2-col2{
+background-color: royalblue;
+}
+.row3 {
+    background-color: rgb(119, 47, 201);
+} */
