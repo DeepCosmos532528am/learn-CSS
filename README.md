@@ -411,3 +411,114 @@ Shorthand for row-gap + column-gap.
     - Dashboard with sidebar & widgets
 
     - News website (header, nav, content, footer)
+
+### Day 6 - Website Responsiveness | Media Queries, Overflow, Box Shadows  
+ 
+56. **What is a Responsive Website?**  
+    - A responsive website adjusts its layout and content based on the screen size or device.  
+    - It ensures readability and usability on mobiles, tablets, laptops, and desktops.  
+    - Achieved using fluid grids, flexible images, and media queries.
+
+57. **How to Create a Responsive Website**  
+    - Start with a mobile-first approach.  
+    - Use percentage-based widths or `fr` units for flexible grids.  
+    - Apply media queries to adapt layout at breakpoints (e.g., tablet, desktop).  
+    - Test across different screen sizes and orientations.
+
+58. **Example Walkthrough**  
+    ✅ Base mobile layout using stacked elements  
+    ✅ Add breakpoints at 768px and 1024px  
+    ✅ Use `flex` or `grid` at larger sizes  
+    ✅ Adjust font sizes and spacing at each stage  
+    ```css
+    @media (min-width: 768px) { ... }
+    @media (min-width: 1024px) { ... }
+    ```
+
+59. **Understanding Media Queries**  
+    - Media queries let CSS apply rules conditionally based on device characteristics.  
+    - Syntax: `@media (min-width: 768px) { ... }`  
+    - Common conditions: `min-width`, `max-width`, `orientation`, `resolution`.
+
+60. **The `screen` Keyword**  
+    - Specifies that the styles apply to screens only (not print).  
+    - Often omitted in modern responsive design as `screen` is the default.  
+    ```css
+    @media screen and (min-width: 1024px) { ... }
+    ```
+
+61. **Removing Fixed Height and Width**  
+    - Avoid hardcoded `width` and `height` like `width: 1200px`.  
+    - Use flexible units: `%`, `vw`, `fr`, `minmax()`.  
+    - Let containers adapt to content or screen size.
+
+62. **Using `min-width` in Media Queries**  
+    - Triggers styles when the viewport is **at least** a certain width.  
+    - Key to **mobile-first** development.  
+    - Ensures styles are **progressively enhanced** as screen grows.  
+    ```css
+    @media (min-width: 768px) { ... }
+    ```
+
+63. **Key Concept Explained**  
+    - Start small → build up.  
+    - Default/mobile styles first.  
+    - Layer enhancements for larger screens via `min-width`.  
+    - This avoids code repetition and ensures better performance on mobile.
+
+64. **Mobile-First vs Desktop-First Approach**  
+    ✅ **Mobile-First Approach**  
+    - Default styles for small screens (mobile)  
+    - Use `@media (min-width: ...)` to add styles for larger screens  
+    - **Ascending order of breakpoints** (small → large)  
+    ```css
+    /* Base styles (mobile) */
+    @media (min-width: 768px) { ... }   /* Tablet */
+    @media (min-width: 1024px) { ... }  /* Desktop */
+    ```
+
+    ✅ **Desktop-First Approach**  
+    - Default styles for large screens (desktop)  
+    - Use `@media (max-width: ...)` to override styles on smaller screens  
+    - **Descending order of breakpoints** (large → small)  
+    ```css
+    /* Base styles (desktop) */
+    @media (max-width: 1024px) { ... }  /* Tablet */
+    @media (max-width: 768px) { ... }   /* Mobile */
+    ```
+
+65. **Why Mobile-First is Preferred**  
+    - Most users browse on mobile devices  
+    - Loads fewer styles on smaller screens → better performance  
+    - Easier to scale up than down  
+    - Promotes **progressive enhancement**
+
+66. **Practical Example**  
+    - Layout starts with vertical stacking.  
+    - At `768px`, increase font size and center content.  
+    - At `1024px`, switch to horizontal `flex` layout.  
+    ```css
+    .card {
+      font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .card {
+        display: flex;
+        font-size: 20px;
+      }
+    }
+    ```
+
+67. **Why Not Use Flexbox Alone?**  
+    - Flexbox is great for **1D layouts** (row **or** column).  
+    - Grid is better for **2D layouts** (rows **and** columns).  
+    - For full-page or complex responsive designs, combine both.  
+    - Use Flexbox inside Grid items for optimal control.
+
