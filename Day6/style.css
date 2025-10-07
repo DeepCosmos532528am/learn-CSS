@@ -1,0 +1,48 @@
+/* Base styles: mobile-first */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  text-align: center;/*done from my side*/
+
+}
+
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
+  .card {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;/*done from my side*/
+  }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 800px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media  (min-width:2014px) {
+    .card {
+      min-width: 2014px;
+    }
+    
+  }
+
+  .card h1 {
+    margin-right: 20px;
+  }
+}
