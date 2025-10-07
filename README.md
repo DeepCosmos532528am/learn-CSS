@@ -586,6 +586,57 @@ Shorthand for row-gap + column-gap.
       which Flexbox can't do directly or cleanly.
     - ✅ Conclusion: **CSS Grid** is a better tool for this type of structured, multi-directional layout.
     
+73. **Box Shadow – Visual Depth & Effects**
+
+    - `box-shadow` adds visual **depth, glow, or lighting** effects to an element.
+    - Syntax: `box-shadow: offset-x offset-y blur-radius spread-radius color;`
+    - Shadows can be applied on multiple sides simultaneously by **comma-separating** values.
+    - In this project:
+      ```css
+      .box {
+        box-shadow:
+          -5px 0 5px 10px rgba(255, 255, 255, 0.3),  /* left */
+           5px 0 5px 10px rgba(255, 255, 255, 0.3),  /* right */
+           0 5px 5px 1px rgba(255, 255, 255, 0.3),   /* bottom */
+           0 -5px 5px rgba(255, 255, 255, 0.3);      /* top */
+      }
+      ```
+    - Each shadow:  
+      → `offset-x` (`±` value) = side of shadow  
+      → `blur-radius` = softness  
+      → `spread-radius` = size  
+      → `color` = visual impact
+    - You can also use `box-shadow` for **lighting effects**, e.g., to simulate a glowing sun:
+      ```css
+      .sun {
+        box-shadow: 0px 0px 20px 10px rgb(238, 146, 26);
+      }
+      ```
+    - Or multiple shadows from all directions for a bright glow:
+      ```css
+      .sun {
+        box-shadow:
+          -10px 0px 200px rgb(238, 192, 26),
+           10px 0px 200px rgb(238, 192, 26),
+           0px 10px 200px rgb(238, 192, 26),
+           0px -10px 200px rgb(238, 192, 26);
+      }
+      ```
+    - ⚠️ Shadow doesn’t affect layout or box dimensions — **purely visual**.
+
+74. **Overflow – Controlling Content Spillage**
+
+    - `overflow` defines what happens if content exceeds the box boundary.
+    - In this `.box`, it is used to **handle large/overflowing content**.
+      ```css
+      overflow: scroll;
+      ```
+    - This makes scrollbars appear **only if needed**, preserving layout.
+    - Alternative:
+      - `overflow: hidden;` → Cuts off anything beyond the box → no scroll
+    - Used here to **avoid text/content spilling out**, especially if fixed height is small.
+    - This ensures UI remains **contained, controlled, and usable** on all screen sizes.
+
 
     
 

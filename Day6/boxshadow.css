@@ -1,0 +1,38 @@
+.box  {
+    background-color: rgb(255, 255, 255);
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        -5px 0 5px 10px rgba(255, 255, 255, 0.3),
+        /* left shadow */
+        5px 0 5px 10px rgba(255, 255, 255, 0.3),
+        /* right shadow */
+        0 5px 5px 1px rgba(255, 255, 255, 0.3),
+        /* bottom shadow */
+        0 -5px 5px rgba(255, 255, 255, 0.3);
+    /* top shadow */
+    overflow: scroll; /*avoid the content overflow, and makes it scrollable , see the preview of this project . without the overflow att. the content gets overflow out of the element*/
+
+    /*overflow:hidden; it makes the overflowing content to hidden, hence not visible, so I do not used here */
+}
+
+.sun {
+      height: 200px;
+    width: 200px;
+    background-color: rgb(238, 192, 26);
+    box-shadow: 0px 0px 20px 10px rgb(238, 146, 26);
+    border-radius: 300px;
+
+    /*Another way to make sun, more brightly*/
+    /* height: 200px;
+    width: 200px;
+    background-color: rgb(238, 192, 26);
+    box-shadow: -10px 0px 200px rgb(238, 192, 26),
+     10px 0px 200px rgb(238, 192, 26),
+    0px 10px 200px rgb(238, 192, 26),
+    0px -10px 200px rgb(238, 192, 26);
+    border-radius: 300px; */
+}
