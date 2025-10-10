@@ -1,0 +1,40 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: black;
+    width: 50%;
+    border: 1px solid rgb(60, 39, 39);
+    font-size: 40px;
+    padding: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    /*to avoid wrapping*/
+
+}
+
+
+
+p {
+    animation: moving 3s infinite;
+}
+
+@keyframes moving {
+    from {
+        margin-left: 110%;
+        
+    }
+
+    to {
+        margin-left: -100%;
+    }
+}
