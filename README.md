@@ -651,3 +651,85 @@ Shorthand for row-gap + column-gap.
       - `overflow: hidden;` → Cuts off anything beyond the box → no scroll
     - Used here to **avoid text/content spilling out**, especially if fixed height is small.
     - This ensures UI remains **contained, controlled, and usable** on all screen sizes.
+
+### Day 7 – CSS Animations 🎞️
+
+75. **CSS Animation Introduction**
+
+- Animations let elements transition between styles **smoothly over time**.
+- Unlike transitions (triggered by interaction), animations can **run automatically** or be looped.
+
+76. **Using `@keyframes`**
+
+  - `@keyframes` defines the **stages of animation** (like start, middle, end).
+  - You assign this animation to an element using `animation-name`.
+
+  ```css
+  @keyframes mymove {
+  0%   { left: 0%; top: 0%; }
+  25%  { left: 91.5%; top: 0%; background-color: lightgreen; }
+  50%  { left: 91.5%; top: 90%; background-color: lightgoldenrodyellow; }
+  70%  { left: 0%; top: 90%; background-color: lightsalmon; }
+  100% { left: 0%; top: 0%; background-color: crimson; }
+   }
+
+77. **Applying Animation to an Element**
+
+ ```css
+.anim {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  position: absolute;
+  animation-name: mymove;
+  animation-duration: 5s;
+  animation-iteration-count: 5;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+  ```
+
+78. **📌 Explanation of each animation property:**
+
+| Property                 | Purpose                                                                                  |
+|--------------------------|------------------------------------------------------------------------------------------|
+| `animation-name`         | Refers to the `@keyframes` block to use                                                 |
+| `animation-duration`     | Total time to complete one cycle (e.g., 5s)                                            |
+| `animation-delay`        | Wait time before animation starts (e.g., 2s)                                           |
+| `animation-iteration-count` | Number of times the animation runs (e.g., 5, or infinite)                            |
+| `animation-direction`    | Direction of movement – normal, reverse, alternate, alternate-reverse                   |
+| `animation-fill-mode`    | What styles apply before and after animation                                            |
+| `animation-timing-function` | Controls animation speed curve (e.g., linear, ease, ease-in, ease-out)               |
+
+
+79. **Visual Description of the Animation**
+
+`The .anim box`:
+
+- Starts at top-left → moves to top-right → then bottom-right → bottom-left → back to top-left
+
+- Changes background color at each keyframe
+
+- Repeats the cycle 5 times with smooth motion
+
+- After completion, it remains at the final state (fill-mode: forwards)
+
+- Hovering over it changes background to lightcoral
+
+80. **Practical Tips**
+
+- Use `position`: absolute with defined left/top in `keyframes` to control movement
+
+- Use `animation-delay:` with `animation-fill-mode` to prepare pre-animation visual state
+
+- `alternate` ensures the element animates forward then backward, creating a looped bounce effect
+
+81. **🧪 Experiment Ideas:**
+
+- Replace `left` and `top` with `transform: translate(...)` for smoother GPU-powered animations
+
+- Add `scale()` or `rotate()` transforms inside keyframes for rotation effects
+
+- Combine with opacity for fading in/out elements
