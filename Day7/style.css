@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+}
+
+.diva {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.anim {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    transition: background-color .5s;
+    /* transition-property: background-color;
+    transition-duration: .5s; */
+    position: absolute;
+    /* animation: mymove 5s infinite; */
+    animation-name: mymove;
+    animation-iteration-count: 5;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards; 
+    /* animation-fill-mode: backwards;
+    animation-fill-mode: both;
+    animation-fill-mode: none; */ /*fill modes are linked to delay time and the time after the animation ends*/
+
+}
+
+.anim:hover {
+    background-color: lightcoral;
+}
+
+@keyframes mymove {
+    0% {
+        left: 0%;
+        top: 0%;
+
+    }
+
+    25% {
+        left: 91.5%;
+        top: 0%;
+        background-color: lightgreen;
+    }
+
+    50% {
+        left: 91.5%;
+        top: 90%;
+        background-color: lightgoldenrodyellow;
+    }
+
+    70% {
+        left: 0%;
+        top: 90%;
+        background-color: lightsalmon;
+    }
+
+    100% {
+        left: 0%;
+        top: 0%;
+        background-color: crimson;
+    }
+}
