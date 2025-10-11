@@ -1,0 +1,75 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    perspective: 800px;
+}
+
+.box {
+    background-color: orange;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 2s;
+    /* transition-timing-function: linear; */
+    /* transition-timing-function: ease-in;*/
+    transition-timing-function: ease-out;
+    transition-delay: .1s;
+}
+
+
+.box:hover {
+    /* background-color: brown; */
+    /* height: 200px;
+    width: 200px; */
+
+    /*--------------------------------*/
+
+   /* transform: scale(2); */
+    /*Applies to both Height and width*/
+   /* transform: scaleX(2);  */
+   /*AppliesOnXaxis,MeansOnWidth*/
+   /* transform: scaleY(2);  */
+   /*AppliesOnYaxis,MeansOnHeight*/
+   /* transform: scaleZ(); */
+    /*AppliesOnZaxis,MeansOnZoomLevel*/
+
+    /*--------------------------------*/
+
+  /* transform: translate(200px, 100px); */
+  /* transform: translateX(200px); */
+  /* transform: translateY(200px); */
+  /* transform: translateZ(200px); */
+  /*(need to add perspective property as well with scaleZ() for its functioning)*/
+
+  /*--------------------------------*/
+
+  /* transform: rotate(360deg); */
+  transform: rotateX(150deg);
+  /* transform: rotateY(100deg); */
+  /* transform: rotateZ(100deg); */
+  
+
+  /*--------------------------------*/
+
+  /* transform: skewX(360deg); */
+  /* transform: skewX(-360deg); */
+   /* transform: skewY(-360deg); */
+    /* transform: skewY(36deg); */
+  
+  
+
+
+  /*NOTE:1 TheseTransformOrTranslatePropertiesCanBeAppliedWithoutHoverAsWell*/
+  /*NOTE:2 for more complex use(just for exploring) visit to CoderArmy CSS 8day video in 9 videos playlist, I have not covered as they are not used in practical uses, those advance task using the listed above properties, are just optional or almost nowhere used*/
+}
