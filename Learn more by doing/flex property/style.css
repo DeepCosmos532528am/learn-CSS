@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+    gap: 5px;
+    background-color: aliceblue;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+   
+
+}
+
+.container{
+    background-color: red;
+    padding: 20px;
+
+}
+.container:first-child{
+    flex-basis: 300px;
+}
+._2{
+    flex-basis: 200px;
+    background-color: rgb(88, 114, 136);
+}
+
+.container:last-child{
+}
